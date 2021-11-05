@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class WorkoutDetail extends AppCompatActivity {
     private final Handler handler = new Handler();
-    private int min = -1;
+    private final int min = -1;
     private ImageView ivGif;
     private TextView tvName;
     private TextView tvDescription;
@@ -37,8 +37,8 @@ public class WorkoutDetail extends AppCompatActivity {
     private Thread thread;
     private boolean flag = false;
 
-    private int nm = 0;
-    private int ns = 0;
+    private int nm = -1;
+    private int ns = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,15 +86,13 @@ public class WorkoutDetail extends AppCompatActivity {
     }
 
     public void start(View view) {
-        tvRemainingTime.setText((spTime.getSelectedItem().toString() + " : 00"));
         flag = true;
-        if (min == -1)
-            min = (Integer.parseInt(spTime.getSelectedItem().toString()));
-        else{
-
+        if (nm == -1) {
+            tvRemainingTime.setText((spTime.getSelectedItem().toString() + " : 00"));
+            nm = (Integer.parseInt(spTime.getSelectedItem().toString()));
+            ns = 0;
         }
-
-        thread = new Thread(new Timer(min * 60));
+        thread = new Thread(new Timer((nm * 60) + ns));
         thread.start();
         btStart.setVisibility(View.INVISIBLE);
         btStop.setVisibility(View.VISIBLE);
@@ -102,12 +100,9 @@ public class WorkoutDetail extends AppCompatActivity {
 
     public void stop(View view) {
         flag = false;
+
         btStart.setVisibility(View.VISIBLE);
         btStop.setVisibility(View.INVISIBLE);
-    }
-
-    public void restart(View view) {
-
     }
 
     class Timer implements Runnable {
@@ -124,19 +119,23 @@ public class WorkoutDetail extends AppCompatActivity {
             while (flag) {
                 if (i >= 0) {
                     try {
+                        tvRemainingTime.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                nm = i / 60;
+                                ns = i % 60;
+                                if (nm == 0 && ns == 0) {
+                                        tvRemainingTime.setText("Done.. Good Job");
+                                        finish();
+                                } else
+                                    tvRemainingTime.setText(nm + " : " + ns);
+                            }
+                        });
+                        i--;
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    tvRemainingTime.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            int min = i / 60;
-                            int sec = i % 60;
-                            tvRemainingTime.setText(min + " : " + sec);
-                        }
-                    });
-                    i--;
                 }
             }
         }

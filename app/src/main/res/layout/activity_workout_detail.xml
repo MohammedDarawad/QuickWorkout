@@ -78,45 +78,35 @@
         app:layout_constraintTop_toBottomOf="@+id/spTime" />
 
     <Button
-        android:id="@+id/btRestart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="restart"
-        android:text="Restart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRemainingTime"
-        app:layout_constraintVertical_bias="0.506" />
-
-    <Button
         android:id="@+id/btStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:onClick="start"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRemainingTime"
-        android:onClick="start"/>
+        app:layout_constraintVertical_bias="0.525" />
 
     <Button
         android:id="@+id/btStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:onClick="stop"
         android:text="Stop"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRemainingTime" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRemainingTime"
+        app:layout_constraintVertical_bias="0.512" />
 
     <ImageView
         android:id="@+id/ivGif"
