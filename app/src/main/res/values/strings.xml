@@ -3,4 +3,9 @@
     <string name="title_activity_home_screen">HomeScreen</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="loginString">Login</string>
+    <string name="usernameString">Username</string>
+    <string name="passwordString">Password</string>
+    <string name="rememberMeString">RememberMe</string>
+    <string name="dontHaveAnAccountString">Don\'t Have An Account? Signup.</string>
 </resources>

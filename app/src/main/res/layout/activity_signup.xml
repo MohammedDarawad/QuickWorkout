@@ -60,7 +60,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btSignuo_Login"
+        android:id="@+id/btSignup_Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Signup"

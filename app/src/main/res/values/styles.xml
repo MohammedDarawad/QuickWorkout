@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_width">169dp</item>
+        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+</resources>
