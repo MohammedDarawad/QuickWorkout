@@ -3,12 +3,10 @@ package com.example.quickworkout;
 public class Category {
     private int id;
     private String name;
-    private int numOfWorkouts;
 
-    public Category(int id, String name, int numOfWorkouts) {
+    public Category(int id, String name) {
         this.id = id;
         this.name = name;
-        this.numOfWorkouts = numOfWorkouts;
     }
 
     public int getId() {
@@ -25,14 +23,6 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getNumOfWorkouts() {
-        return numOfWorkouts;
-    }
-
-    public void setNumOfWorkouts(int numOfWorkouts) {
-        this.numOfWorkouts = numOfWorkouts;
     }
 
     @Override

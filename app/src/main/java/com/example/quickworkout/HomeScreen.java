@@ -35,9 +35,9 @@ public class HomeScreen extends AppCompatActivity {
         gson = new Gson();
 
         Category[] categories = new Category[3];
-        categories[0] = new Category(0, "Legs", 4);
-        categories[1] = new Category(1, "Arms", 4);
-        categories[2] = new Category(2, "Chest", 4);
+        categories[0] = new Category(0, "Legs");
+        categories[1] = new Category(1, "Arms");
+        categories[2] = new Category(2, "Chest");
 
         ArrayAdapter<Category> adapter = new ArrayAdapter<Category>(this,
                 android.R.layout.simple_list_item_1,

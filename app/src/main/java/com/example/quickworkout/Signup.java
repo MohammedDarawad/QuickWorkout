@@ -26,8 +26,6 @@ public class Signup extends AppCompatActivity {
     private RadioButton rbSelected;
     private int selectedId;
 
-    private CheckBox cbRememberMe;
-
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
 
@@ -44,8 +42,6 @@ public class Signup extends AppCompatActivity {
         rgGender = findViewById(R.id.rgGender);
         selectedId = rgGender.getCheckedRadioButtonId();
         rbSelected = findViewById(selectedId);
-
-        cbRememberMe = findViewById(R.id.cbRememberMe);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         editor = prefs.edit();

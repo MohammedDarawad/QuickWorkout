@@ -59,12 +59,6 @@
             android:text="Female" />
     </RadioGroup>
 
-    <CheckBox
-        android:id="@+id/cbRememberMe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Remember Me" />
-
     <Button
         android:id="@+id/btSignuo_Login"
         android:layout_width="match_parent"
