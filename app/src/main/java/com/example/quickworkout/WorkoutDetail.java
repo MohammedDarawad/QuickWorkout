@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.quickworkout.model.Workout;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -85,6 +86,22 @@ public class WorkoutDetail extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        flag = false;
+        btStart.setVisibility(View.VISIBLE);
+        btStop.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        flag = false;
+        btStart.setVisibility(View.VISIBLE);
+        btStop.setVisibility(View.INVISIBLE);
+    }
+
     public void start(View view) {
         flag = true;
         if (nm == -1) {
@@ -125,8 +142,8 @@ public class WorkoutDetail extends AppCompatActivity {
                                 nm = i / 60;
                                 ns = i % 60;
                                 if (nm == 0 && ns == 0) {
-                                        tvRemainingTime.setText("Done.. Good Job");
-                                        finish();
+                                    tvRemainingTime.setText("Done.. Good Job");
+                                    finish();
                                 } else
                                     tvRemainingTime.setText(nm + " : " + ns);
                             }

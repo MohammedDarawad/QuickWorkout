@@ -1,4 +1,4 @@
-package com.example.quickworkout;
+package com.example.quickworkout.model;
 
 public class User {
     private int id;

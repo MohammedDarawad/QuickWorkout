@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.quickworkout.model.User;
 import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {

@@ -12,10 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.quickworkout.model.Workout;
 import com.google.gson.Gson;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class WorkoutList extends AppCompatActivity {
     private TextView tvHeader;

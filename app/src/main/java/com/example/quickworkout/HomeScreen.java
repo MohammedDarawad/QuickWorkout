@@ -11,6 +11,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.quickworkout.model.Category;
+import com.example.quickworkout.model.Workout;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
