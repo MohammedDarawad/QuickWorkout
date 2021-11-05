@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signup"
-    android:orientation="vertical">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Signup">
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Signup" />
+        android:text="@string/signupString" />
 
     <EditText
         android:id="@+id/edtUsername_Login"
+        style="@style/EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Username"
+        android:hint="@string/usernameString"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/edtPassword_Login"
+        style="@style/EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName" />
+        android:hint="@string/passwordString"
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/edtPasswordConf"
+        style="@style/EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Re Type Password"
-        android:inputType="textPersonName" />
+        android:hint="@string/passwordConfString"
+        android:inputType="textPassword" />
 
     <RadioGroup
         android:id="@+id/rgGender"
-        android:layout_width="match_parent"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -49,21 +54,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
-            android:text="Male" />
+            android:text="@string/maleString" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Female" />
+            android:text="@string/femaleString" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btSignup_Login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Signup"
-        android:onClick="signup"/>
+        style="@style/Button"
+        android:layout_width="226dp"
+        android:layout_height="58dp"
+        android:onClick="signup"
+        android:text="@string/signupString" />
 
 </LinearLayout>

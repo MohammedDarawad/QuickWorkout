@@ -8,4 +8,8 @@
     <string name="passwordString">Password</string>
     <string name="rememberMeString">RememberMe</string>
     <string name="dontHaveAnAccountString">Don\'t Have An Account? Signup.</string>
+    <string name="signupString">Signup</string>
+    <string name="passwordConfString">Re-Enter Password</string>
+    <string name="maleString">Male</string>
+    <string name="femaleString">Female</string>
 </resources>
