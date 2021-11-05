@@ -13,4 +13,12 @@
     <string name="maleString">Male</string>
     <string name="femaleString">Female</string>
     <string name="chooseCategoryString">Please Choose Your Workout Category</string>
+    <string name="workoutNameString">Workout Name</string>
+    <string name="workoutDescriptionString">Workout Description</string>
+    <string name="chooseTimeString">Choose Time</string>
+    <string name="minutesString">Minutes</string>
+    <string name="remainingTimeString">Remaining Time</string>
+    <string name="startString">Start</string>
+    <string name="stopString">Stop</string>
+    <string name="workoutImageString">Workout Image</string>
 </resources>

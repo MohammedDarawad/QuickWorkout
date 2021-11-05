@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:text="TextView"
+        android:text="@string/workoutNameString"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/header"/>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -37,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="TextView"
+            android:text="@string/workoutDescriptionString"
             android:textSize="20sp" />
     </ScrollView>
 
@@ -48,7 +49,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
-        android:text="Choose Time"
+        android:text="@string/chooseTimeString"
         app:layout_constraintEnd_toStartOf="@+id/spTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
@@ -57,8 +58,10 @@
         android:id="@+id/spTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="131dp"
+        android:minHeight="48dp"
+        android:scrollbarSize="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
@@ -68,9 +71,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="157dp"
-        android:text="0:00"
+        android:text="@string/remainingTimeString"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -79,12 +82,13 @@
 
     <Button
         android:id="@+id/btStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        style="@style/Button"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="32dp"
         android:onClick="start"
-        android:text="Start"
+        android:text="@string/startString"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -94,12 +98,13 @@
 
     <Button
         android:id="@+id/btStop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        style="@style/Button"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="32dp"
         android:onClick="stop"
-        android:text="Stop"
+        android:text="@string/stopString"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +118,7 @@
         android:layout_width="174dp"
         android:layout_height="153dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/workoutImageString"
         android:foregroundGravity="center_vertical|center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="Minutes"
+        android:text="@string/minutesString"
         app:layout_constraintStart_toEndOf="@+id/spTime"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
