@@ -12,4 +12,5 @@
     <string name="passwordConfString">Re-Enter Password</string>
     <string name="maleString">Male</string>
     <string name="femaleString">Female</string>
+    <string name="chooseCategoryString">Please Choose Your Workout Category</string>
 </resources>
