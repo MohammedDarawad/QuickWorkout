@@ -26,13 +26,4 @@
 
     </ListView>
 
-    <Button
-        android:id="@+id/btViewBookmarks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Bookmarks"
-        app:layout_constraintTop_toBottomOf="@id/lvCategories"
-        tools:layout_editor_absoluteX="-5dp"
-        android:onClick="viewBookmarks"/>
-
 </LinearLayout>

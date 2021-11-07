@@ -79,9 +79,4 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
     }
-
-    public void viewBookmarks(View view) {
-        Intent intent = new Intent(this, HomeScreen.class);
-        startActivity(intent);
-    }
 }
